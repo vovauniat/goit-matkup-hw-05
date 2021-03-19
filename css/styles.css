@@ -98,9 +98,6 @@ img {
   color: var(--accent-color);
 } */
 
-.focus-page {
-  color: #2196f3;
-}
 /* ========= SOCIAL LIST========== */
 .social-list {
   display: flex;
@@ -189,6 +186,10 @@ img {
 }
 
 .navigation-link {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -205,6 +206,17 @@ img {
 .navigation-link:hover,
 .navigation-link:focus {
   color: var(--accent-color);
+}
+
+.foc::after {
+  display: block;
+  position: absolute;
+  content: "";
+  height: 4px;
+  width: 100%;
+  background-color: #2196f3;
+  margin-top: 28px;
+  border-radius: 2px;
 }
 
 .kontact {
@@ -582,6 +594,55 @@ img {
 }
 
 /* ============================ END FUTER ========================= */
+
+/* =============================modal okno=======================================*/
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.2);
+
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 528px;
+  min-height: 580px;
+  background-color: #ffffff;
+}
+
+.modal-close-but {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+}
+
+.close-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: none;
+  pointer-events: none;
+}
+/* =================================modal okno=======================================*/
 
 /*  ============================= PORTFOLIO PAGE CSS ======================= */
 /*  ============================= PORTFOLIO PAGE CSS ======================= */
