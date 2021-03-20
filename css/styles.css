@@ -267,14 +267,14 @@ img {
 
 /* ============================= HERO ======================== */
 .hero {
-  background: url(./img/herophoto.jpg), rgba(47, 48, 58, 0.4);
+  background: url(./img/herophoto.jpg);
+  background-color: rgba(47, 48, 58, 0.4);
   width: auto;
   height: 600px;
   padding-top: 200px;
   padding-bottom: 200px;
 }
 .hero-title {
-  /* margin-top: 106px; */
   margin-bottom: 40px;
   text-align: center;
   font-family: var(--main-font);
