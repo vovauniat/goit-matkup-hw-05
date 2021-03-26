@@ -536,7 +536,7 @@ img {
 }
 .fut-all {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: baseline;
 }
 
@@ -572,7 +572,6 @@ img {
   flex-wrap: wrap;
   flex-direction: column;
   margin-left: 70px;
-  margin-right: 70px;
 }
 .fut-soc-head {
   font-family: var(--main-font);
@@ -593,6 +592,81 @@ img {
   fill: #ffffff;
 }
 
+.fut-form-blok {
+  display: flex;
+  flex-direction: column;
+  margin-left: 93px;
+}
+
+.hed-fut-form {
+  font-family: var(--main-font);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+}
+
+.fut-form {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+.fut-form-field {
+  margin-right: 12px;
+}
+
+/* .fut-form-input-wrapper {
+} */
+
+.fut-form-input {
+  font-family: var(--main-font);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: transparent;
+  border-radius: 4px;
+  padding-left: 16px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fut-form-btn {
+  display: flex;
+  align-items: center;
+  align-self: center;
+
+  font-family: var(--main-font);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+
+  padding: 10px 28px;
+  color: #ffffff;
+  background-color: #2196f3;
+  width: 200;
+  border-radius: 4px;
+  border: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.modal-form-btn:hover,
+.modal-form-btn:focus {
+  background-color: var(--accent-color);
+  color: #ffffff;
+}
+
+.fut-form-icon {
+  margin-left: 10px;
+  fill: #ffffff;
+}
 /* ============================ END FUTER ========================= */
 
 /* =============================modal okno=======================================*/
@@ -630,9 +704,15 @@ img {
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   display: flex;
   align-items: center;
+}
+
+.modal-close-but:hover,
+.modal-close-but:focus {
+  fill: var(--accent-color);
 }
 
 .close-icon {
@@ -670,8 +750,6 @@ img {
   line-height: 1.16;
   letter-spacing: 0.01em;
   color: #757575;
-
-  transition: border-color 250ms linear;
 }
 
 .modal-form-input-wrapper {
@@ -684,7 +762,7 @@ img {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding-left: 42px;
-  transition: border-color 250ms linear;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-form-input:focus {
@@ -703,10 +781,8 @@ img {
   left: 12px;
   transform: translateY(-50%);
   display: block;
-  width: 18px;
-  height: 18px;
 
-  transition: fill 250ms linear;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-form-input:focus + .modal-form-icon {
@@ -720,7 +796,7 @@ img {
   border-radius: 4px;
   padding: 12px 16px;
   resize: none;
-  transition: border-color 250ms linear;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-form-message::placeholder {
@@ -761,7 +837,7 @@ img {
   background: #ffffff;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 250ms linear;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-form-term:checked + .modal-form-check-desc::before {
@@ -772,8 +848,13 @@ img {
   border: var(--accent-color);
 }
 
-.modal-form-term:focus + .modal-form-check-desc::before {
-}
+/* .modal-form-term:focus + .modal-form-check-desc::before {
+  background-image: url(../images/galka.svg);
+  background-position: center;
+  background-color: var(--accent-color);
+  background-repeat: no-repeat;
+  border: var(--accent-color);
+} */
 
 .modal-form-btn {
   align-self: center;
@@ -785,7 +866,6 @@ img {
 
   color: #ffffff;
   padding: 10px 55px;
-  margin-top: 30px;
   background-color: #2196f3;
   min-width: 200;
   border-radius: 4px;
@@ -796,6 +876,7 @@ img {
   background-color: var(--accent-color);
   color: #ffffff;
 }
+
 /* =================================modal okno=======================================*/
 
 /*  ============================= PORTFOLIO PAGE CSS ======================= */
